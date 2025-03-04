@@ -13,6 +13,7 @@ S3. Give the final updated matrix;
 
 */
 
+//-------------------------------------------------------------->Using DFS<-----------------------------------------------------------------------------------//
 
 #include <iostream>
 #include <vector>
@@ -89,3 +90,90 @@ int main() {
 
     return 0;
 }
+
+//--------------------------------------------------------------->END<-----------------------------------------------------------------------------------//
+
+
+
+
+//-------------------------------------------------------------->Using BFS<---------------------------------------------------------------------------------//
+
+
+// #include <iostream>
+// #include <vector>
+// #include <queue>
+// using namespace std;
+
+// // Flood fill algorithm using BFS
+// void floodFill(vector<vector<int>> &screen, int x, int y, int newColor) {
+//     int rows = screen.size();
+//     int cols = screen[0].size();
+//     int oldColor = screen[x][y];
+
+//     if (oldColor == newColor) {
+//         cout << "New color and old color are the same. No fill needed." << endl;
+//         return;
+//     }
+
+//     queue<pair<int, int>> q;
+//     q.push({x, y});
+//     screen[x][y] = newColor;
+
+//     while (!q.empty()) {
+//         auto [cx, cy] = q.front();
+//         q.pop();
+
+//         cout << "Filling position (" << cx << ", " << cy << ") with color " << newColor << endl;
+
+//         vector<pair<int, int>> directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+//         for (auto [dx, dy] : directions) {
+//             int nx = cx + dx, ny = cy + dy;
+//             if (nx >= 0 && nx < rows && ny >= 0 && ny < cols && screen[nx][ny] == oldColor) {
+//                 screen[nx][ny] = newColor;
+//                 q.push({nx, ny});
+//                 cout << "Queueing position (" << nx << ", " << ny << ")" << endl;
+//             }
+//         }
+//     }
+// }
+
+// void printScreen(const vector<vector<int>> &screen) {
+//     for (const auto &row : screen) {
+//         for (int pixel : row) {
+//             cout << pixel << " ";
+//         }
+//         cout << endl;
+//     }
+// }
+
+// int main() {
+//     vector<vector<int>> screen = {
+//         {1, 1, 1, 1, 1},
+//         {1, 1, 0, 0, 1},
+//         {1, 0, 0, 1, 1},
+//         {1, 1, 1, 1, 1}
+//     };
+
+//     cout << "Original screen:\n";
+//     printScreen(screen);
+
+//     int x = 1, y = 2, newColor = 2;
+//     cout << "\nUpdating screen with flood fill using BFS...\n";
+//     floodFill(screen, x, y, newColor);
+
+//     cout << "\nUpdated screen:\n";
+//     printScreen(screen);
+
+//     return 0;
+// }
+
+
+//-------------------------------------------------------------->END<---------------------------------------------------------------------------------//
+
+
+
+
+
+
+
+
