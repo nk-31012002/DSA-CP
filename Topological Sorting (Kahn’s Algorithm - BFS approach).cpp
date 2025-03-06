@@ -46,7 +46,7 @@ vector<int> topologicalSort(int V, vector<vector<int>> &adj){
     }
   }
 
-  if(topo_order.size() != 0){
+  if(topo_order.size() != V){
     court<<"Cycle detected !! Topological sorting not possible"<<endl;
     return {};
   }
