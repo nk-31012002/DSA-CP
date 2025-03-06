@@ -39,7 +39,7 @@ vector<int> topologicalSort(int V, vector<vector<int>> &adj){
   while(!q.empty()){
     int u = q.front();
     q.pop();
-    topo_ordere.push_back(u);
+    topo_order.push_back(u);
 
     for(int v : adj[u]){
       if(--in_degree[v] == 0) q.push(v);
